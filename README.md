@@ -1,2 +1,2 @@
-# projects
-My personal and school projects
+# Project portfolio
+My finished personal projects and school projects
