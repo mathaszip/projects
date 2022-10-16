@@ -4,7 +4,7 @@
 
 # Description
 Write a program that models a simple calculator.
-The calculator keeps track of a single number of the type `double', which contains the result calculated so far.
+The calculator keeps track of a single number of the type `double`, which contains the result calculated so far.
 This number is called the accumulator.
 The initial value of the accumulator is `0.0`.
 In a simple, iterative dialogue with the user, various calculations are performed on the accumulator.
