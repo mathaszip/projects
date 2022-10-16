@@ -1,60 +1,60 @@
-# Project 1 : En regnemaskine på kommandolinjen
-- Programmet afleveres: 26.10.2022 kl. 21.00
-- Aflevering: Sidste commit inden deadline der er pushet til Github tæller
+# Project 1 : A command line calculator
+- The program is handed in: 26.10.2022 at 21.00
+- Submission: Last commit before the deadline that has been pushed to Github counts
 
-# Beskrivelse
-Skriv et program der modellerer en simpel regnemaskine. 
-Regnemaskinen holder styr på ét enkelt tal af typen `double`, som indholder det hidtidigt beregnede resultat. 
-Dette tal kaldes akkumulatoren. 
-Akkumulatorens startværdi er `0.0`. 
-I en simpel, iterativ dialog med brugeren udføres der forskellige beregninger på akkumulatoren. 
-Disse beregninger kan være styret af unære eller binære operatorer, som i denne opgave alle noteres med netop ét tegn.
+# Description
+Write a program that models a simple calculator.
+The calculator keeps track of a single number of the type `double', which contains the result calculated so far.
+This number is called the accumulator.
+The initial value of the accumulator is `0.0`.
+In a simple, iterative dialogue with the user, various calculations are performed on the accumulator.
+These calculations can be controlled by unary or binary operators, which in this exercise are all noted with exactly one sign.
 
-Unære operationer (som står foran sin operand, og derfor er prefix) udfører en beregning på akkumulatoren:
+Unary operations (which precede their operand, and are therefore prefixed) perform a calculation on the accumulator:
 
-`operator` `akkumulator`
+`operator` `accumulator`
 
-Binære operationer udfører en beregning på akkulatoren og en ekstra operand på følgende måde:
+Binary operations perform a calculation on the accumulator and an additional operand as follows:
 
-`akkumulator` `operator` `højre_opperand`
+`accumulator` `operator` `right_upperand`
 
-I begge tilfælde lægges værdien af udtrykket tilbage i akkumulatoren.
+In both cases, the value of the expression is returned to the accumulator.
 
-Det anbefales at operationen, som regnemaskinen skal udføre, indlæses som en `char` med `scanf`. 
-Binære operatorer kræver en (højre) operand, der indlæses som en `double` med `scanf`.
+It is recommended that the operation to be performed by the calculator is loaded as a `char` with `scanf`.
+Binary operators require a (right) operand that is loaded as a `double' with `scanf`.
 
-Du skal have en funktion, `scan_data`, med to output parametre, som returnerer en operator og en mulig højre operand fra en datalinje. 
-Hvis der anvendes en unær operator returneres operanden blot som `0.0`.
+You must have a function, `scan_data`, with two output parameters, which returns an operator and a possible right operand from a data line.
+If a unary operator is used, the operand is simply returned as `0.0`.
 
-Du skal også have en funktion, `do_next_op`, som udfører den påkrævede operation: `do_next_op` skal have to input parametre (operator og operand) foruden akkumulatoren, som både skal kunne bruges til input og output (og som derfor skal være en pointer). 
-Operanden ignoreres for unære operatorer.
+You must also have a function, `do_next_op`, which performs the required operation: `do_next_op` must have two input parameters (operator and operand) in addition to the accumulator, which must be usable for both input and output (and therefore must be a pointer ).
+The operand is ignored for unary operators.
 
-Regnemaskinens samlede dialog skal indkapsles i en funktion, `run_calculator`, som skal returnere slutværdien af akkumulatoren.
+The entire dialog of the calculator must be encapsulated in a function, `run_calculator`, which must return the final value of the accumulator.
 
-Overvej også at skrive en boolsk funktion, der kan afgøre om en operator (af typen `char`) er binær.
+Also consider writing a Boolean function that can determine whether an operator (of type `char') is binary.
 
-Her er de gyldige binære operatorer i regnemaskinen:
+Here are the valid binary operators in the calculator:
 
-- `+`    for addition af akkumulatoren med operanden
-- `-`    for subtraktion af akkumulatoren med operanden
-- `*`    for multiplikation af akkumulatoren med operanden
-- `/`    for division af akkumulatoren med operanden
-- `^`    for potensopløftning af akkumulatoren med operanden
+- `+` for addition of the accumulator with the operand
+- `-` for subtraction of the accumulator with the operand
+- `*` for multiplication of the accumulator by the operand
+- `/` for division of the accumulator by the operand
+- `^` for exponentiation of the accumulator with the operand
 
-Og her er de gyldige unære operatorer:
+And here are the valid unary operators:
 
-- `#`    for kvadratroden af akkumulatoren
-- `%`    for at vende fortegnet af akkumulatoren
-- `!`    for at dividere 1 med akkumulatoren
-- `q`    for at afslutte regnemaskinen med slutresultatet
+- `#` for the square root of the accumulator
+- `%` to reverse the sign of the accumulator
+- `!` to divide 1 by the accumulator
+- `q` to exit the calculator with the final result
 
-Din regnemaskine skal nægte at tage kvadratroden af et negativt tal, og den skal nægte at dividere med nul. 
-I tilfælde af en sådan ulovlig operation, skal akkumulatoren blot efterlades uændret. 
-Der skal ikke udskrives fejlmeddelelser.
+Your calculator must refuse to take the square root of a negative number, and it must refuse to divide by zero.
+In case of such an illegal operation, the accumulator must simply be left unchanged.
+No error messages should be printed.
 
-Din regnemaskine skal vise den akkumulerede værdi efter hver operation.
+Your calculator should display the accumulated value after each operation.
 
-Her er et eksempel på en dialog med regnemaskinen - som dialogen kan se ud når du får skrevet dit program:
+Here is an example of a dialogue with the calculator - as the dialogue may look like when you write your program:
 
 ```shell
 Enter operator, and an optional operand: + 5.000000
@@ -72,16 +72,16 @@ Result so far is 1.732051.
 Enter operator, and an optional operand: ^ 2.000000
 Result so far is 3.000000.
 Enter operator, and an optional operand: * 4.000000
-Result so far is 12.000000.
+Result so far is 12,000,000.
 Enter operator, and an optional operand: !
 Result so far is 0.083333.
 Enter operator, and an optional operand: q
 Final result is: 0.083333
 ```
 
-Denne opgave er inspireret af en tilsvarende opgave fra 6. og 7. udgave af lærebogen, som anvendes på kurset.
+This assignment is inspired by a similar assignment from the 6th and 7th editions of the textbook, which is used in the course.
 
-Som altid skal du lave top-down programmering med trinvis forfinelse. 
-Overvej omhyggeligt de anvendte kontrolstrukturer. 
-Overvej også god brug af operatorerne i C, til at udføre regnemaskinens operationer. 
-Og sidst men ikke mindst, brug gode input- og output parametre i dine funktioner.
+As always, do top-down programming with incremental refinement.
+Carefully consider the control structures used.
+Also consider making good use of the operators in C to perform calculator operations.
+And last but not least, use good input and output parameters in your functions.
