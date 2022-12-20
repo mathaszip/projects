@@ -1,5 +1,0 @@
-K:/project-1-mathiaszip/cmake-build-debug/CMakeFiles/edit_cache.dir
-K:/project-1-mathiaszip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-K:/project-1-mathiaszip/cmake-build-debug/src/CMakeFiles/project1.dir
-K:/project-1-mathiaszip/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-K:/project-1-mathiaszip/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,5 @@
+K:/projects/calculator-mini-project-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+K:/projects/calculator-mini-project-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+K:/projects/calculator-mini-project-1/cmake-build-debug/src/CMakeFiles/project1.dir
+K:/projects/calculator-mini-project-1/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+K:/projects/calculator-mini-project-1/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
